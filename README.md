@@ -1,0 +1,1 @@
+A professional front-end website for a fictional Primary Laboratory, developed as an academic project for Laboratory Management. The site presents laboratory services, diagnostic tests, patient information, and other essential laboratory resources through a responsive and user-friendly interface.
