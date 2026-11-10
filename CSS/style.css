@@ -1,0 +1,126 @@
+/* ============================================
+                  Color Palette 
+    ===========================================
+*/
+
+:root {
+    /* Brand */
+    --color-primary: #1F2AA8;
+    --color-secondary: #074DF3;
+    --color-accent: #50BDFD;
+
+    /* Backgrounds */
+    --color-background: #F7FAFC;
+    --color-surface: #FFFFFF;
+
+    /* Typography */
+    --color-text: #10233F;
+    --color-text-muted: #5B6B7F;
+
+    /* UI */
+    --color-border: #D7E3F0;
+
+    /* Status */
+    --color-success: #087F5B;
+    --color-warning: #8A5A00;
+    --color-error: #C83C4A;
+
+    /* Font */
+    --font-primary: "Inter", sans-serif;
+}
+
+/* Global */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+body {
+    font-weight: 400;
+}
+
+nav a {
+    font-weight: 500;
+}
+
+
+/* Header Styling */
+
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+
+    padding: clamp(0.75rem, 1.5vw, 1.5rem)
+             clamp(1rem, 5vw, 5rem);
+
+    background-color: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 1.5vw, 1.5rem);
+}
+
+.main-nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: clamp(0.8rem, 0.9vw, 2rem);
+    font-weight: 500;
+}
+
+.main-nav a:hover {
+    color: var(--color-secondary);
+}
+
+.nav-register {
+    padding: 0.65rem 1.1rem;
+
+    background-color: var(--color-primary);
+    color: var(--color-surface) !important;
+
+    border-radius: 0.5rem;
+}
+
+.nav-register:hover {
+    background-color: var(--color-secondary);
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.5rem, 1vw, 0.8rem);
+
+    color: var(--color-primary);
+    text-decoration: none;
+
+    font-family: var(--font-primary);
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 700;
+}
+
+.logo img {
+    width: clamp(2rem, 3vw, 3rem);
+    height: auto;
+    display: block;
+}
+
