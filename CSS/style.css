@@ -17,6 +17,7 @@
     --color-text: #10233F;
     --color-text-muted: #5B6B7F;
     --color-text-inverted: #F7FAFC;
+    --clear-text-footer: rgba(255, 255, 255, 0.7);
 
     /* UI */
     --color-border: #D7E3F0;
@@ -27,7 +28,7 @@
     --color-error: #C83C4A;
 
     /* Font */
-    --font-primary: "Inter", sans-serif;
+    --font-primary: "Inter", sans-serif
 }
 
 
@@ -220,19 +221,19 @@ nav a {
 }
 
 .hero::after {
-  content: "";
+    content: "";
 
-  position: absolute;
+    position: absolute;
 
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
 
-  box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.25);
 
-  pointer-events: none;  
+    pointer-events: none;  
 }
 
 /* ============================================
@@ -309,7 +310,7 @@ nav a {
     font-weight: 600;
     text-align: center;
 
-    border-radius: 0.5rem;
+    border-radius: calc(0.1vh + 0.5rem);
 }
 
 .hero-button:hover {
@@ -379,13 +380,9 @@ nav a {
    ============================================
 */
 
-/* ============================================
-                Service Section
-   ============================================
-*/
-
-.service-title {
+.section-title {
   text-align: center;
+  position: relative;
 
   padding: clamp(0.8rem, 1vw, 2rem);
 
@@ -395,6 +392,62 @@ nav a {
 .section-label {
   color: var(--color-text-inverted);
 }
+
+.section-introduction {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    
+    align-items: center;
+
+    max-width: 45rem;
+    margin: clamp(1rem, 2vw, 2rem) auto clamp(1rem, 2vw, 2rem);
+
+    text-align: center;
+}
+
+.section-link {
+    display: flex; 
+    justify-content: space-evenly;
+    
+    flex: 1 1 auto;
+    max-width: calc(25vh + 1rem);
+
+    padding: clamp(0.6rem, 0.8vw, 0.75rem)
+             clamp(1rem, 1.5vw, 1.25rem);   
+
+    text-decoration: none;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-primary);    
+
+
+    border: 2px solid var(--color-primary);
+    border-radius: 2rem;
+}
+
+.section-title::after {
+  content: "";
+
+  position: absolute;
+
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.25);
+
+  pointer-events: none;  
+}
+
+/* ============================================
+                Service Section
+   ============================================
+*/
+
 
 .service-content {
     display: grid;
@@ -407,4 +460,219 @@ nav a {
     gap: clamp(2rem, 2vw, 4rem);
 
     background-color: var(--color-background);  
+}
+
+/* ============================================
+               Why Us Section?
+   ============================================
+*/
+
+.why-us {
+    background-color: var(--color-surface);
+    
+}
+
+.value-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    padding: clamp(2rem, 2vw, 4rem)
+             clamp(2.5rem, 3vw, 5rem);
+                      
+    gap: clamp(1rem, 2vw, 2rem);
+    
+}
+
+.value-item {
+    position: relative;
+    padding: clamp(1rem, 1vw, 2rem)
+             clamp(1.25rem, 1.5vw, 2.5rem);
+
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+
+    background-color: var(--color-background);
+}
+
+.value-item::after {
+    content: "";
+
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+
+    pointer-events: none;  
+
+    border-radius: 0.75rem;
+}
+
+/* ============================================
+              Patient Info Section
+   ============================================
+*/
+
+.patient-info-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    padding: clamp(2rem, 2vw, 4rem)
+             clamp(2.5rem, 3vw, 5rem);
+                      
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+.patient-info-item {
+    position: relative;
+    padding: clamp(1rem, 1vw, 2rem)
+             clamp(1.25rem, 1.5vw, 2.5rem);
+
+    border: 2px solid var(--color-border);
+    border-radius: 0.75rem;
+
+    background-color: var(--color-background);
+}
+
+.patient-info-item::after {
+    content: "";
+
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25);
+
+    pointer-events: none;  
+
+    border-radius: 0.75rem;
+}
+/* ============================================
+                Visit Section
+   ============================================
+*/
+
+.visit-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.5fr) minmax(0, 1fr);
+    align-items: center;
+    
+    padding: clamp(2rem, 2vw, 4rem)
+             clamp(2.5rem, 3vw, 5rem);
+                      
+    gap: clamp(2rem, 2vw, 4rem);
+
+    background-color: var(--color-background);  
+}
+
+.visit-information{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    padding: clamp(2rem, 2vw, 4rem)
+             clamp(2.5rem, 3vw, 5rem);
+                      
+    gap: clamp(1rem, 2vw, 2rem);
+}
+
+
+/* ============================================
+                  Footer
+   ============================================
+*/
+
+.site-footer {
+    position: relative;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+.site-footer:after {
+    content: "";
+
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    z-index: 1;
+
+    box-shadow: 0px 8px 7px rgba(0, 0, 0, 0.25);
+
+    pointer-events: none;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: clamp(2rem, 4vw, 5rem);
+
+    padding: clamp(2.5rem, 5vw, 4rem)
+             clamp(1.5rem, 6vw, 6rem);
+}
+
+.footer-brand {
+    max-width: 25rem;
+}
+
+.footer-brand .logo {
+    color: var(--color-surface);
+}
+
+.footer-brand p {
+    margin-top: 1rem;
+    color: var(--clear-text-footer);
+    line-height: 1.6;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin: 0 0 0.5rem;
+    color: var(--color-surface);
+}
+
+.footer-links a {
+    color: var(--clear-text-footer);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--color-accent);
+}
+
+.footer-contact p {
+    margin: 0;
+    color: var(--clear-text-footer);
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    padding: 1rem clamp(1.5rem, 6vw, 6rem);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
 }
